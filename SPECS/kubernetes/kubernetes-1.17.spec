@@ -69,7 +69,7 @@ cd %{_builddir}/%{name}/src
 tar -xof %{_builddir}/%{name}/kubernetes-src.tar.gz
 
 # build and update kubernetes components that are provided as binary
-# (other/unused kubernetes componenents will not be built)
+# (other/unused kubernetes components will not be built)
 components_to_build=$(ls -1 %{_builddir}/%{name}/node/bin)
 for component in ${components_to_build}; do
   echo "+++ building ${component}"
